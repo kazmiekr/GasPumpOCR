@@ -12,7 +12,7 @@ Project for attempting to scan pictures of gas pumps and detect the digits in th
 
 * `brew install python` - Using python 2.7.13
 * `brew install opencv3` - Using >= OpenCV 3.2.0
-* Install the package into the python site packages following the instructions from the above command output
+* Install the OpenCV package into the python site packages following the instructions from the above command output
 
 ## Running
 
