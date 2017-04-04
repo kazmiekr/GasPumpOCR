@@ -5,7 +5,7 @@ current_stack_y = start_y
 current_stack_x = 0
 current_stack_width = 0
 min_width = 200
-max_stack_y = 1000
+max_stack_y = 450
 y_buffer = 25
 x_buffer = 10
 

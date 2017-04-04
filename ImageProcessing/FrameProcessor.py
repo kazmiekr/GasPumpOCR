@@ -51,18 +51,15 @@ class FrameProcessor:
         debug_images = []
 
         alpha = float(2.5)
-        beta = float(0)
+
+        debug_images.append(('Original', self.original))
 
         # Adjust the exposure
         exposure_img = cv2.multiply(self.img, np.array([alpha]))
         debug_images.append(('Exposure Adjust', exposure_img))
 
-        # Adjust the brightness
-        brite_img = cv2.add(exposure_img, np.array([beta]))
-        debug_images.append(('Briteness Adjust', brite_img))
-
         # Convert to grayscale
-        img2gray = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
+        img2gray = cv2.cvtColor(exposure_img, cv2.COLOR_BGR2GRAY)
         debug_images.append(('Grayscale', img2gray))
 
         # Blur to reduce noise
