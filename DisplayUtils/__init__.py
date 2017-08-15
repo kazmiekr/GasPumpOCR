@@ -1,1 +1,1 @@
-from Colors import bcolors
+from .Colors import bcolors

@@ -73,7 +73,7 @@ def main():
     for fname in os.listdir(training_dir):
         path = os.path.join(training_dir, fname)
         if os.path.isdir(path):
-            print 'Training ' + fname
+            print('Training ' + fname)
             tfiles = os.listdir(path)
             for tfile in tfiles:
                 if not tfile.startswith('.'):

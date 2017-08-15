@@ -147,7 +147,7 @@ class FrameProcessor:
             avg_digit_height = float(total_digit_height) / potential_digits_count
             avg_digit_y = float(total_digit_y) / potential_digits_count
             if self.debug:
-                print "Average Digit Height and Y: " + str(avg_digit_height) + " and " + str(avg_digit_y)
+                print("Average Digit Height and Y: " + str(avg_digit_height) + " and " + str(avg_digit_y))
 
         output = ''
         ix = 0
@@ -167,7 +167,7 @@ class FrameProcessor:
                 # Call into the KNN to determine the digit
                 digit = self.predict_digit(cropped)
                 if self.debug:
-                    print "Digit: " + digit
+                    print("Digit: " + digit)
                 output += digit
 
                 # Helper code to write out the digit image file for use in KNN training
@@ -217,9 +217,9 @@ class FrameProcessor:
 
         # Log some information
         if self.debug:
-            print "Potential Digits " + str(len(potential_digits))
-            print "Potential Decimals " + str(len(potential_decimals))
-            print "String: " + output
+            print("Potential Digits " + str(len(potential_digits)))
+            print("Potential Decimals " + str(len(potential_decimals)))
+            print("String: " + output)
 
         return debug_images, output
 
