@@ -83,7 +83,7 @@ class FrameProcessor:
         debug_images.append(('Inversed', inverse))
 
         # Find the lcd digit contours
-        _, contours, _ = cv2.findContours(inverse, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  # get contours
+        contours, _ = cv2.findContours(inverse, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  # get contours
 
         # Assuming we find some, we'll sort them in order left -> right
         if len(contours) > 0:
