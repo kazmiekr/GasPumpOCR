@@ -24,8 +24,8 @@ def main():
     img_file = file_name
     if len(sys.argv) == 2:
         img_file = sys.argv[1]
-    setup_ui()
     frameProcessor.set_image(img_file)
+    setup_ui()
     process_image()
     cv2.waitKey()
 
