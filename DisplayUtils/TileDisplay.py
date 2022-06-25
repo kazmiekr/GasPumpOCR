@@ -28,5 +28,5 @@ def show_img(name, img):
 def reset_tiles():
     global current_stack_x, current_stack_y, current_stack_width
     current_stack_x = 0
-    current_stack_y = current_stack_y
+    current_stack_y = 0
     current_stack_width = 0
