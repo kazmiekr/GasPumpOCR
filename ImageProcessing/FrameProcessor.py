@@ -22,6 +22,9 @@ class FrameProcessor:
         self.knn = self.train_knn(self.version)
 
     def set_image(self, file_name):
+        if not os.path.isfile(file_name):
+            raise IOError("File doesn't exist:", file_name)
+
         self.file_name = file_name
         self.img = cv2.imread(file_name)
         self.original, self.width = self.resize_to_height(self.height)
